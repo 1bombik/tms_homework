@@ -1,0 +1,5 @@
+a = int(input("Write your 1st digit:"))
+b = int(input("Write your 2nd digit:"))
+c = int(input("Write your 3rd digit:"))
+x = (a, b, c)
+print("Max:", max(x))
