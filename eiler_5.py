@@ -1,19 +1,12 @@
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-b = sum(a)**2 #получаем диапазон, в котором точно будет нужное число
-c = 0
+first = int(input("Введи число начала диапазона:"))
+last = int(input("Введи число конца диапазона:"))
+a = []
+for e in range(first, last+1):
+    a.append(e)
+b = sum(a)**2 #диапазон, в котором будет нужное число
 y = []
 for c in range(1,b+1):
-    if (
-        c % a[0] == 0
-        and c % a[1] == 0
-        and c % a[2] == 0
-        and c % a[3] == 0
-        and c % a[4] == 0
-        and c % a[5] == 0
-        and c % a[6] == 0
-        and c % a[7] == 0
-        and c % a[8] == 0
-        and c % a[9] == 0
-        ):
-        y.append(c)
+    for x in range(min(a), max(a)):
+        if c % x == 0:
+            y.append(c)
 print(y)
